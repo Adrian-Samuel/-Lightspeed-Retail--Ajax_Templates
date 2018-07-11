@@ -1,3 +1,5 @@
+// Using Fetch & localStorage web APIs to dynamically store and output all objects from API as a workaround rate-limits
+ 
 
 // Selecting the element with the RAD number
 let RAD = document.querySelector('body > div.cr-sidebar.no_print.js-sidebar > div.cr-sidebar__sub-header > div > div:nth-child(1) > div.cr-popover.cr-sidebar__popover.js-sidebar-popover > div.cr-popover__header > div:nth-child(2)');
