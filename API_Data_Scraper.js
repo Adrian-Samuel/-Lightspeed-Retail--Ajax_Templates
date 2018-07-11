@@ -1,4 +1,5 @@
-// Using Fetch & localStorage web APIs to dynamically store and output all objects from API as a workaround rate-limits client-side
+/* Using Fetch & localStorage web APIs to dynamically store and output all objects from API 
+as a workaround rate-limitations on the client-side */
  
 
 // Selecting the element with the RAD number
