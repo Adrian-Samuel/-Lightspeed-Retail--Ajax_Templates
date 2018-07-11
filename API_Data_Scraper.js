@@ -26,7 +26,7 @@ fetch(`${fetch_url}/API/Account/${rad}/Item.json`
         }).then((response)=> response.json())
         .then((data)=> {
             
-        console.log(data.Item);
+        //console.log(data.Item);
         // Get values only of the Objects
         let itemData = Object.values(data.Item);
         //  dynamically merge the arrays into one (arr)
