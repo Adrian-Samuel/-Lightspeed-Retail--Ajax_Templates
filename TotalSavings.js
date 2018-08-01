@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     // The total savings of that singular item
                     let savings = MSRP - defaultPrice + promotion;
                     // adding the total sales in HTML on the page
-                    thankYou.insertAdjacentHTML('afterend', `<span style="position:absolute; left: 409px; font-size: 9pt;">YOU SAVE $${savings} TODAY!</span>`);
+                    thankYou.insertAdjacentHTML('afterend', `<span style="position:absolute; left: 409px; font-size: 9pt;">YOU SAVE $${savings.toFixed(2)} TODAY!</span>`);
                 }
             }
             // If the sale contains only one line item
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
 
                 } // Add that total savings amount in HTML on the page
-                thankYou.insertAdjacentHTML('afterend', `<span style="position:absolute; left: 409px; font-size: 9pt;">YOU SAVE $${savings} TODAY!</span>`);
+                thankYou.insertAdjacentHTML('afterend', `<span style="position:absolute; left: 409px; font-size: 9pt;">YOU SAVE $${savings.toFixed(2)} TODAY!</span>`);
 
             }
 
