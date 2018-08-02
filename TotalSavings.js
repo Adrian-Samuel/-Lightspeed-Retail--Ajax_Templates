@@ -18,7 +18,7 @@ if (typeof data.Sale.SaleLines.SaleLine.length  == "undefined") {
      let quantity = data.Sale.SaleLines.SaleLine.unitQuantity
    if(amountPaid != MSRP) {
        let promotion = (defaultPrice * quantity) - amountPaid; 
-       let savings = ((MSRP - defaultPrice + promotion)* quantity );
+       let savings = ((MSRP - defaultPrice )* quantity ) + promotion;
        thankYou.insertAdjacentHTML('afterend', `<span style="position:absolute; left: 409px; font-size: 9pt;">YOU SAVE $${savings.toFixed(2)} TODAY!</span>`);
     } 
 }
@@ -33,7 +33,7 @@ else {
     let amountPaid = data.Sale.SaleLines.SaleLine[i].calcTotal;
     if(amountPaid != MSRP) {
         let promotion = (defaultPrice * quantity) - amountPaid;
-        savings = savings + ((MSRP - defaultPrice + promotion) * quantity);
+        savings = savings + ((MSRP - defaultPrice) * quantity) + promotion;
     
         }
     } 
