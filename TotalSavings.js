@@ -16,7 +16,7 @@ if (typeof data.Sale.SaleLines.SaleLine.length  == "undefined") {
      let defaultPrice = data.Sale.SaleLines.SaleLine.Item.Prices.ItemPrice[0].amount;  
      let MSRP = data.Sale.SaleLines.SaleLine.Item.Prices.ItemPrice[1].amount;
      let quantity = data.Sale.SaleLines.SaleLine.unitQuantity
-   if(amountPaid != MSRP) {
+   if((amountPaid/quantity) != MSRP || amountPaid/quantity) != defaultPrice) {
        let promotion = (defaultPrice * quantity) - amountPaid; 
        let savings = ((MSRP - defaultPrice )* quantity ) + promotion;
        thankYou.insertAdjacentHTML('afterend', `<span style="position:absolute; left: 409px; font-size: 9pt;">YOU SAVE $${savings.toFixed(2)} TODAY!</span>`);
@@ -31,7 +31,7 @@ else {
     let defaultPrice = data.Sale.SaleLines.SaleLine[i].Item.Prices.ItemPrice[0].amount;
     let MSRP = data.Sale.SaleLines.SaleLine[i].Item.Prices.ItemPrice[1].amount;
     let amountPaid = data.Sale.SaleLines.SaleLine[i].calcTotal;
-    if(amountPaid != MSRP) {
+    if((amountPaid/quantity) != MSRP || amountPaid/quantity) != defaultPrice) {
         let promotion = (defaultPrice * quantity) - amountPaid;
         savings = savings + ((MSRP - defaultPrice) * quantity) + promotion;
     
