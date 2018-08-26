@@ -1,4 +1,7 @@
 // Event Listener, runs the code inside of it when all content on page is fully loaded
+/* Total Savings = MSRP - Sales Price + Promotion (discount amount)
+This needs to be done for each sales lines */
+
 document.addEventListener("DOMContentLoaded", function() {
 
 let str = window.location.href; 
