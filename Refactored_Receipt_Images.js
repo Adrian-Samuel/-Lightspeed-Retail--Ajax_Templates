@@ -8,6 +8,7 @@
         const visibleSales = document.querySelectorAll('.sale.lines tbody .description > div:nth-child(1)');
         const itemTitle = document.querySelector('.sale.lines th.description');
         itemTitle.insertAdjacentHTML('afterend', `<th> Images </th>`);
+        const sleep = (time) => new Promise(res => setTimeout(res, time));
 
 
         let sale_request = await fetch(`https://${domain}/API/Account/${RAD}/DisplayTemplate/Sale/${saleID}.json`, {
@@ -51,10 +52,11 @@
             }
 
         });
+        await sleep(1000);
+        window.print();
+
 
     } catch (err) {
         console.log(err);
-    } finally {
-        window.print();
-    }
+    } 
 })();
