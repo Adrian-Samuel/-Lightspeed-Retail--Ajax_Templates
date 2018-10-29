@@ -25,7 +25,7 @@
         saleList.map(async (x, i) => {
 
             if (x.hasOwnProperty('Item')) {
-                let itemID = x.Item.itemID;
+                const itemID = x.Item.itemID;
 
                 let image_request = await fetch(`https://${domain}/API/Account/${RAD}/Item/${itemID}/Image.json`, {
                     credentials: 'same-origin'
@@ -40,7 +40,6 @@
                         itemImages = [image_result.Image];
                     }
 
-                    
                     visibleSales[i].parentElement.insertAdjacentHTML('afterend', `<td style="border-bottom: 1px solid black;"><img style="width: 100px; "src ="${itemImages[0].baseImageURL}${itemImages[0].publicID}"></td>`)
 
                 } else {
@@ -57,5 +56,5 @@
 
     } catch (err) {
         console.log(err);
-    } 
+    }
 })();
