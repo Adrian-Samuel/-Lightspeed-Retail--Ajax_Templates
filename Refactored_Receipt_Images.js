@@ -41,7 +41,6 @@
                     }
 
                     
-                    let url = `${itemImages[0].baseImageURL}${itemImages[0].publicID}`;
                     visibleSales[i].parentElement.insertAdjacentHTML('afterend', `<td style="border-bottom: 1px solid black;"><img style="width: 100px; "src ="${itemImages[0].baseImageURL}${itemImages[0].publicID}"></td>`)
 
                 } else {
