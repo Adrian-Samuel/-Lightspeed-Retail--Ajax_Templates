@@ -1,5 +1,5 @@
 /* Simple Demo script to show how to add saved workorder images on a workorder quote.
-Add a script tag and insert code under the <div class="header"> tag in the workorder template
+Add a script tag and insert code under the <div class="header"> tag in the workorder template 
 */
 
 document.addEventListener("DOMContentLoaded", async () => {
