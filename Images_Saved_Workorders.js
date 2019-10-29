@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const json = await workorderReq.json();
     const images = !Array.isArray(json.Workorder.Images.WorkorderImage) ? [json.Workorder.Images.WorkorderImage] : json.Workorder.Images.WorkorderImage;
 
-    images.forEach(image => container.insertAdjacentHTML('beforeend', `<img style="width: 500px;"src=${image.baseImageURL}${image.publicID}>`));
+    images.forEach(image => container.insertAdjacentHTML('beforeend', `<img style="width: 200px;height:200px;"src=${image.baseImageURL}${image.publicID}>`));
 
 });
