@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         credentials: "same-origin"
     });
     const json = await workorderReq.json();
-    const images = !Array.isArray(images) ? [json.Workorder.Images.WorkorderImage] : json.Workorder.Images.WorkorderImage;
+    const images = !Array.isArray(json.Workorder.Images.WorkorderImage) ? [json.Workorder.Images.WorkorderImage] : json.Workorder.Images.WorkorderImage;
 
     images.forEach(image => container.insertAdjacentHTML('beforeend', `<img style="width: 500px;"src=${image.baseImageURL}${image.publicID}>`));
 
