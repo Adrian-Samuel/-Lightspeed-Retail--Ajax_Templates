@@ -4,8 +4,7 @@ Add a script tag and insert code under the <div class="header"> tag in the worko
 
 document.addEventListener("DOMContentLoaded", async () => {
     const domain = window.location.host;
-    const url = window.location.href;
-    const [RAD, workorderID] = url.match(/\d+/g);
+    const [RAD, workorderID] = window.location.href.match(/\d+/g);
     const header = document.querySelector('h1');
 
     header.insertAdjacentHTML('afterend', `<div class="for_images" style="width: auto; height: auto;" ></div>`);
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         credentials: "same-origin"
     });
     const json = await workorderReq.json();
-    const images = !Array.isArray(images) ? [json.Workorder.Images.WorkorderImage] : json.Workorder.Images.WorkorderImage
+    const images = !Array.isArray(images) ? [json.Workorder.Images.WorkorderImage] : images
 
     images.foreach(image => container.insertAdjacentHTML('beforeend', `<img style="width: 500px;"src=${image.baseImageURL}${image.publicID}>`));
 
