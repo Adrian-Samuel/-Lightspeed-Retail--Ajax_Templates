@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const [RAD, workorderID] = window.location.href.match(/\d+/g);
     const header = document.querySelector('h1');
 
-    header.insertAdjacentHTML('afterend', `<div class="for_images" style="width: auto; height: auto;" ></div>`);
+    header.insertAdjacentHTML('afterend', `<div class="for_images" style="width: auto; height: auto;display: flex; align-items: center; justify-content: center;" ></div>`);
     const container = document.querySelector('.for_images');
-    container.style.cssText = "display: flex; align-items: center; justify-content: center;";
 
     const workorderReq = await fetch(`https://${domain}/API/Account/${RAD}/Workorder/${workorderID}.json?load_relations=["Images"]`, {
         credentials: "same-origin"
